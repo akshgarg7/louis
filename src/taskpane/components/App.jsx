@@ -4,7 +4,7 @@ import Header from "./Header";
 import HeroList from "./HeroList";
 import TextInsertion from "./TextInsertion";
 import { makeStyles } from "@fluentui/react-components";
-import { Ribbon24Regular, LockOpen24Regular, DesignIdeas24Regular } from "@fluentui/react-icons";
+import { Ribbon24Regular, LockOpen24Regular, DesignIdeas24Regular, Lightbulb24Regular } from "@fluentui/react-icons";
 
 const useStyles = makeStyles({
   root: {
@@ -19,22 +19,23 @@ const App = (props) => {
   const listItems = [
     {
       icon: <Ribbon24Regular />,
-      primaryText: "Achieve more with Office integration",
+      primaryText: "Get AI assistance in negotiation, communication and redlining.",
     },
     {
-      icon: <LockOpen24Regular />,
-      primaryText: "Unlock features and functionality",
+      icon: <Lightbulb24Regular />,
+      primaryText: "Use senior partner’s negotiation style and preferences",
     },
     {
       icon: <DesignIdeas24Regular />,
-      primaryText: "Create and visualize like a pro",
+      primaryText: "Within the familiar Microsoft Word ecosystem",
     },
   ];
 
   return (
     <div className={styles.root}>
-      <Header logo="assets/logo-filled.png" title={props.title} message="Welcome" />
-      <HeroList message="Discover what this add-in can do for you today!" items={listItems} />
+      <Header logo="assets/logo-filled.png" title={props.title} message="Louis AI" />
+      <HeroList message="LouisAI is a negotiation simulator which uses Microsoft Word as a
+                         medium to train junior lawyers" items={listItems} />
       <TextInsertion />
     </div>
   );
